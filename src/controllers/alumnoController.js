@@ -6,7 +6,7 @@ async function getAllAlumnos(req,res)
 {
     const {skip=0, limit=0} = req.query
 
-    if(regex.test(String(skip)) || regex.characterValidation.test(String(limit)))
+    if(regex.characterValidation.test(String(skip)) || regex.characterValidation.test(String(limit)))
     {
         res.status(400).send('ERROR: Números inválidos')
     }
