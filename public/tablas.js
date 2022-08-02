@@ -1,6 +1,6 @@
-const alumnosUrl = "http://localhost:3000/api/v1/alumnos"
+const alumnosUrl = "https://escuelita.onrender.com/api/v1/alumnos"
 
-const profesoresUrl = "http://localhost:3000/api/v1/profesores"
+const profesoresUrl = "https://escuelita.onrender.com/api/v1/profesores"
 
 fetch(alumnosUrl)
     .then(response => response.json())
