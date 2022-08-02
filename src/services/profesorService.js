@@ -2,7 +2,7 @@ const profesores = require('../database/profesores.js')
 
 function getAllProfesores()
 {
-    return profesores.getAllProfesores()
+    return profesores.getAllProfesores(skip, limit)
 }
 
 function getOneProfesor(id)

@@ -1,9 +1,9 @@
 const {ProfesorModel} = require('../models/models.js')
 
 //Obtener profesores
-async function getAllProfesores()
+async function getAllProfesores(skip, limit)
 {
-    const profesores = await ProfesorModel.find()
+    const profesores = await ProfesorModel.find().skip(skip).limit(limit)
     return profesores
 }
 

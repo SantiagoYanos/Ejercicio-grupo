@@ -4,9 +4,19 @@ const regex = require('../regex/regex.js')
 
 async function getAllProfesores(req,res)
 {
-    const obtenidos = await profesorService.getAllProfesores()
+    const {skip=0, limit=0} = req.query
 
-    res.status(200).json({data: obtenidos})
+    if(regex.characterValidation.test(String(skip)) || regex.characterValidation.test(String(limit)))
+    {
+        res.status(400).send('ERROR: Número Inválidos')
+    }
+    else
+    {
+        const obtenidos = await profesorService.getAllProfesores(skip, limit)
+        res.status(200).json({data: obtenidos})
+    }
+
+    
 }
 
 async function getOneProfesor(req,res)
