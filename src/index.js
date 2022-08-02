@@ -7,12 +7,16 @@ const morgan = require('morgan')
 
 const dotenv = require('dotenv')
 
+const cors = require('cors')
+
 const alumnosRoute = require('./v1/routes/alumnosRoute.js')
 
 const profesoresRoute = require('./v1/routes/profesoresRoute.js')
 
 app.use(express.json())
 app.use(morgan('dev'))
+app.use(express.static('public'))
+app.use(cors())
 dotenv.config()
 
 //Mongoose Connection
@@ -38,7 +42,6 @@ app.listen(3000, ()=>
 {
     console.log('Conectado al servidor')
 })
-
 
 //Mathias Ezequiel Latronico
 
