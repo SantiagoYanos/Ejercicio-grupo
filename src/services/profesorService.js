@@ -1,6 +1,6 @@
 const profesores = require('../database/profesores.js')
 
-function getAllProfesores()
+function getAllProfesores(skip, limit)
 {
     return profesores.getAllProfesores(skip, limit)
 }

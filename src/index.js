@@ -31,7 +31,7 @@ app.use('/api/v1/profesores', profesoresRoute)
 
 app.use('/', (req,res)=>
 {
-    res.send('Index')
+    res.sendFile(__dirname + '/views/index.html')
 })
 
 app.listen(3000, ()=>
