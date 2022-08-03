@@ -23,23 +23,27 @@ fetch(profesoresUrl)
 function renderAlumnos(data) {
     const alumnos = document.getElementById('renderAlumnos')
 
-    alumnos.innerHTML = '<ol>'
+    let body = '<ol>'
 
     data.forEach(alumno => {
-        alumnos.innerHTML += `<li>Nombre: ${alumno.name}, Edad: ${alumno.age}, País: ${alumno.country}</li>`
-    });
-
-    alumnos.innerHTML += '</ol>'
-}
-
-function renderProfesores(data){
-    const profesores = document.getElementById('renderProfesores')
-
-    profesores.innerHTML = '<ol>'
-
-    data.forEach(profesor => {
-        profesores.innerHTML += `<li>Nombre: ${profesor.name}, Materia: ${profesor.course}, Grado: ${profesor.grade}`
+        body += `<li>Nombre: ${alumno.name}, Edad: ${alumno.age}, País: ${alumno.country}</li>`
     })
 
-    profesores.innerHTML += '</ol>'
+    body += '</ol>'
+
+    alumnos.innerHTML = body
+}
+
+function renderProfesores(data) {
+    const profesores = document.getElementById('renderProfesores')
+
+    let body = '<ol>'
+
+    data.forEach(profesor => {
+        body += `<li>Nombre: ${profesor.name}, Materia: ${profesor.course}, Grado: ${profesor.grade}</li>`
+    })
+
+    body += '</ol>'
+
+    profesores.innerHTML = body
 }
