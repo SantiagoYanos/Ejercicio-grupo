@@ -1,5 +1,7 @@
 # Trabajo en grupo
 
+*Objetivo*: Crear un CRUD de alumnos y profesores.
+
 ## Grupo
 
 - Mathias Ezequiel Latronico
