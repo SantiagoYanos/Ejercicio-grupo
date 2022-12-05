@@ -34,8 +34,6 @@ npm start
 
 ### CRUD - Create Read Update Delete (Alumnos)
 
-<br />
-
 #### CREATE | POST
 
 `http://localhost:3000/api/v1/alumnos`
